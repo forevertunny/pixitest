@@ -8,7 +8,14 @@ import * as PIXI from "pixi.js";
 export default class
 {
 
-    static TestName = "TestName";
+    static AAAA =
+        {
+            get: function ()
+            {
+                return "AAAA";
+            }
+        }
+    // static TestName = "TestName";
     // _key = "app";
 
     // _stageWidth = 0;
