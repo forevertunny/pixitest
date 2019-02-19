@@ -8,13 +8,13 @@ import * as PIXI from "pixi.js";
 export default class
 {
 
-    static AAAA =
-        {
-            get: function ()
-            {
-                return "AAAA";
-            }
+    static get AAAAAA ()
+    {
+        return {
+            abc: "abc",
+            zzz: 123456
         }
+    }
     // static TestName = "TestName";
     // _key = "app";
 
