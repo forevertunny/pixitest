@@ -7,6 +7,8 @@ import * as PIXI from "pixi.js";
 
 export default class
 {
+
+    static TestName = "TestName";
     // _key = "app";
 
     // _stageWidth = 0;
