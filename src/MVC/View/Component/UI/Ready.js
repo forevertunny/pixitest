@@ -3,8 +3,8 @@ import Isaac from "../../../../Isaac";
 
 export class Ready extends Isaac.UI.Container
 {
-    _ready_sp;
-    _tap_sp;
+    // _ready_sp;
+    // _tap_sp;
 
     init (data)
     {

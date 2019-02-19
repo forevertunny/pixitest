@@ -6,24 +6,29 @@ import Isaac from "../../../Isaac";
 
 export class AudioProxy extends MVC.Proxy
 {
-    static NAME = "AudioProxy";
+    static get Name () 
+    {
+        return "AudioProxy";
+    }
 
-    _soundLoader;
 
-    _isLoadComplete;
-
-    _sounds;
-
-    _isMuteAll = false;
-    _isRealMuteAll = false;
-    _isPauseAll = false;
-    _isRealPauseAll = false;
-
-    _playTemp = [];
 
     constructor(key)
     {
         super(AudioProxy.NAME);
+
+        this._soundLoader;
+
+        this._isLoadComplete;
+
+        this._sounds;
+
+        this._isMuteAll = false;
+        this._isRealMuteAll = false;
+        this._isPauseAll = false;
+        this._isRealPauseAll = false;
+
+        this._playTemp = [];
 
         this.initializeNotifier(key);
 

@@ -4,11 +4,11 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class Menu extends Isaac.UI.Container
 {
-    _title;
-    _rate_btn;
-    _ready_btn;
-    _score_btn;
-    _copyright_sp;
+    // _title;
+    // _rate_btn;
+    // _ready_btn;
+    // _score_btn;
+    // _copyright_sp;
 
     init (data)
     {

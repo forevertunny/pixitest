@@ -4,7 +4,10 @@ import { AudioProxy } from "../../Mode/Proxy/AudioProxy";
 
 export class AudioCommand extends MVC.SimpleCommand
 {
-    static NAME = "AudioCommand";
+    static get Name () 
+    {
+        return "AudioCommand";
+    }
 
     constructor(key)
     {

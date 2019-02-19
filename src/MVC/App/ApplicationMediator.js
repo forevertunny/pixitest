@@ -2,25 +2,28 @@ import * as puremvc from "puremvc";
 
 export class ApplicationMediator extends puremvc.Mediator
 {
-    static Name = "ApplicationMediator";
-
-    constructor( viewComponent )
+    static get Name () 
     {
-        super( ApplicationMediator.Name, viewComponent );
+        return "ApplicationMediator";
     }
 
-    listNotificationInterests()
+    constructor(viewComponent)
+    {
+        super(ApplicationMediator.Name, viewComponent);
+    }
+
+    listNotificationInterests ()
     {
         return [];
     }
 
-    handleNotification( notification )
+    handleNotification (notification)
     {
 
 
     }
 
-    get main()
+    get main ()
     {
         return this.viewComponent;
     }

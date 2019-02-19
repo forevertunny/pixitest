@@ -4,12 +4,19 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class FroceGround extends PIXI.Container
 {
-    _bgCount = 3;
-    _landSpeed = 3;
-    _lands = [];
 
-    _land;
-    _colliderH;
+    constructor()
+    {
+        super();
+
+        this._bgCount = 3;
+        this._landSpeed = 3;
+        this._lands = [];
+
+        this._land;
+        this._colliderH;
+    }
+
 
     init (data)
     {

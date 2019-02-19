@@ -2,12 +2,17 @@ import * as PIXI from "pixi.js";
 
 export class BackGround extends PIXI.Container
 {
-    _bgCount = 3;
-    _bgSpeed = 3;
-    _bgs = [];
+    constructor()
+    {
+        super();
 
-    _bg_day;
-    _bg_hight;
+        this._bgCount = 3;
+        this._bgSpeed = 3;
+        this._bgs = [];
+
+        this._bg_day;
+        this._bg_hight;
+    }
 
     init (data)
     {

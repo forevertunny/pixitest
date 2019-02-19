@@ -1,35 +1,35 @@
-export class GameCommandEvent
+export var GameCommandEvent =
 {
-    static enable = "GameCommand_enable";
+    enable: "GameCommand_enable",
 
-    static ready = "Gamecommand_ready";
+    ready: "Gamecommand_ready",
 
-    static play = "GameCommand_play";
+    play: "GameCommand_play",
 
-    static click = "GameCommand_click";
+    click: "GameCommand_click",
 
-    static addscore = "GameCommand_addscore";
+    addscore: "GameCommand_addscore",
 
-    static die = "GameCommand_die";
+    die: "GameCommand_die",
 
-    static gameover = "GameCommand_gameover";
+    gameover: "GameCommand_gameover",
 
-    static gomenu = "GameCommand_gomenu";
+    gomenu: "GameCommand_gomenu",
 }
 
-export class GameProxyEvent
+export var GameProxyEvent =
 {
-    static initUI = "GameProxy_initUI";
+    initUI: "GameProxy_initUI",
 
-    static initGame = "GameProxy_initGame";
+    initGame: "GameProxy_initGame",
 
-    static updata = "GameProxy_updata";
+    updata: "GameProxy_updata",
 
-    static statechagne = "GameProxy_statechange";
+    statechagne: "GameProxy_statechange",
 
-    static jump = "GameProxy_jump";
+    jump: "GameProxy_jump",
 
-    static upscore = "GameProxy_upscore";
+    upscore: "GameProxy_upscore",
 
-    static die = "GameProxy_die";
+    die: "GameProxy_die",
 }

@@ -4,11 +4,11 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class GameOver extends Isaac.UI.Container
 {
-    _title;
-    _scorebroad;
-    _menu_btn;
-    _ready_btn;
-    _score_btn;
+    // _title;
+    // _scorebroad;
+    // _menu_btn;
+    // _ready_btn;
+    // _score_btn;
 
     init (data)
     {

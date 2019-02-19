@@ -3,7 +3,10 @@ import { GameProxyEvent } from "../../Event/GameEvent";
 
 export class UIMediator extends MVC.Mediator
 {
-    static NAME = "UIMediator";
+    static get NAME ()
+    {
+        return "UIMediator";
+    }
 
     constructor(viewComponent)
     {

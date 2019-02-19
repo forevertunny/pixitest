@@ -6,19 +6,25 @@ import Isaac from "../../../Isaac";
 
 export class GameProxy extends MVC.Proxy
 {
-    static NAME = "GameProxy";
+    static get Name () 
+    {
+        return "GameProxy";
+    }
 
-    _loader;
-    _ticker;
 
-    _score = 0;
-    _bestScore = 0;
 
-    _gameState = null;
 
     constructor(key)
     {
         super();
+
+        this._loader;
+        this._ticker;
+
+        this._score = 0;
+        this._bestScore = 0;
+
+        this._gameState = null;
 
         this.initializeNotifier(key);
     }

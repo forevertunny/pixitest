@@ -4,8 +4,10 @@ import { GameCommandEvent } from "../../Event/GameEvent";
 
 export class GameCommand extends MVC.SimpleCommand
 {
-
-    static NAME = "GameCommand";
+    static get Name () 
+    {
+        return "GameCommand";
+    }
 
     constructor(key)
     {

@@ -14,27 +14,27 @@ export var BezierInfo =
 
 export class BezierTween
 {
-    _target;
+    // _target;
 
-    _isLoop = false;
+    // _isLoop = false;
 
-    _bzs = [];
+    // _bzs = [];
 
-    _currBzIndex = 0;
+    // _currBzIndex = 0;
 
-    _fps = 0;
+    // _fps = 0;
 
-    _currPosition = 0;
+    // _currPosition = 0;
 
-    _currPaseTime = 0;
+    // _currPaseTime = 0;
 
-    _ticker;
+    // _ticker;
 
-    _onUpdate;
+    // _onUpdate;
 
-    _onComplete;
+    // _onComplete;
 
-    _totalTime = 0;
+    // _totalTime = 0;
 
     /**
      * 
@@ -45,7 +45,7 @@ export class BezierTween
      * @param {Function} onUpdate 
      * @param {Function} onComplete 
      */
-    constructor( target, bzs = [], isLoop = true, isDrawLine = false, onUpdate = null, onComplete = null )
+    constructor(target, bzs = [], isLoop = true, isDrawLine = false, onUpdate = null, onComplete = null)
     {
         this._target = target;
         this._isLoop = isLoop;
@@ -53,24 +53,24 @@ export class BezierTween
         this._onUpdate = onUpdate;
         this._onComplete = onComplete;
 
-        for ( let i = 0; i < this._bzs.length; i++ )
+        for (let i = 0; i < this._bzs.length; i++)
         {
-            this._totalTime += this._bzs[ i ].delayTime;
+            this._totalTime += this._bzs[i].delayTime;
         }
 
         this._ticker = new PIXI.ticker.Ticker();
-        this._ticker.add( () => this.update() );
+        this._ticker.add(() => this.update());
 
 
 
-        if ( isDrawLine )
+        if (isDrawLine)
         {
 
         }
 
     }
 
-    play()
+    play ()
     {
         this._ticker.start();
 
@@ -79,18 +79,18 @@ export class BezierTween
         this._currPosition = 0;
     }
 
-    stop()
+    stop ()
     {
         this._ticker.stop();
     }
 
-    update()
+    update ()
     {
-        if ( this._target !== null && this._bzs.length > 0 && this._currBzIndex < this._bzs.length )
+        if (this._target !== null && this._bzs.length > 0 && this._currBzIndex < this._bzs.length)
         {
-            let bz = this._bzs[ this._currBzIndex ];
+            let bz = this._bzs[this._currBzIndex];
 
-            if ( this._currPaseTime === 0 && bz.onStart !== null && bz.onStart !== undefined )
+            if (this._currPaseTime === 0 && bz.onStart !== null && bz.onStart !== undefined)
             {
                 bz.onStart();
             }
@@ -98,7 +98,7 @@ export class BezierTween
             let interval = 1 / bz.time;
             this._currPaseTime += this._ticker.elapsedMS;
 
-            if ( this._currPaseTime > bz.delayTime )
+            if (this._currPaseTime > bz.delayTime)
             {
                 this._currPosition += interval * this._ticker.elapsedMS;
 
@@ -107,71 +107,71 @@ export class BezierTween
                 let rotationTo = null;
                 let alphaTo = null;
 
-                if ( bz.bez != null )
+                if (bz.bez != null)
                 {
-                    moveTo = bz.bez.GetPointAtTime( this._currPosition );
+                    moveTo = bz.bez.GetPointAtTime(this._currPosition);
                 }
-                if ( bz.scale != null )
+                if (bz.scale != null)
                 {
-                    scaleTo = bz.scale.GetPointAtTime( this._currPosition );
+                    scaleTo = bz.scale.GetPointAtTime(this._currPosition);
                 }
-                if ( bz.rotation != null )
+                if (bz.rotation != null)
                 {
-                    rotationTo = bz.rotation.GetPointAtTime( this._currPosition );
+                    rotationTo = bz.rotation.GetPointAtTime(this._currPosition);
                 }
 
-                if ( bz.alpha != null )
+                if (bz.alpha != null)
                 {
-                    alphaTo = bz.alpha.GetPointAtTime( this._currPosition );
+                    alphaTo = bz.alpha.GetPointAtTime(this._currPosition);
                 }
 
 
                 //console.log( moveTo );
                 //console.log( scaleTo );
 
-                if ( moveTo != null )
+                if (moveTo != null)
                 {
-                    this._target.position.set( moveTo.x, moveTo.y );
+                    this._target.position.set(moveTo.x, moveTo.y);
                 }
 
-                if ( scaleTo != null )
+                if (scaleTo != null)
                 {
-                    this._target.scale.set( scaleTo.x, scaleTo.y )
+                    this._target.scale.set(scaleTo.x, scaleTo.y)
                 }
 
-                if ( rotationTo != null )
+                if (rotationTo != null)
                 {
                     this._target.rotation = rotationTo;
                 }
 
-                if ( alphaTo != null )
+                if (alphaTo != null)
                 {
                     this._target.alpha = alphaTo;
                 }
 
-                if ( this._onUpdate !== null && this._onUpdate !== undefined )
+                if (this._onUpdate !== null && this._onUpdate !== undefined)
                 {
                     this._onUpdate();
                 }
 
             }
 
-            if ( this._currPaseTime >= bz.time + bz.delayTime )
+            if (this._currPaseTime >= bz.time + bz.delayTime)
             {
 
                 this._currBzIndex++;
 
-                if ( bz.onComplete !== null && bz.onComplete !== undefined )
+                if (bz.onComplete !== null && bz.onComplete !== undefined)
                 {
                     bz.onComplete();
                 }
 
-                if ( this._currBzIndex >= this._bzs.length )
+                if (this._currBzIndex >= this._bzs.length)
                 {
-                    if ( !this._isLoop )
+                    if (!this._isLoop)
                     {
                         this.stop();
-                        if ( this._onComplete !== null && this._onComplete !== undefined )
+                        if (this._onComplete !== null && this._onComplete !== undefined)
                         {
                             this._onComplete();
                         }
@@ -193,7 +193,7 @@ export class BezierTween
 
     }
 
-    get GetTotaleTime()
+    get GetTotaleTime ()
     {
         return this._totalTime;
     }

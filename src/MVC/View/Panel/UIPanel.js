@@ -10,15 +10,15 @@ import { GameOver } from "../Component/UI/GameOver";
 
 export class UIPanel extends Isaac.UI.Stage
 {
-    _width;
-    _height;
-    _key;
+    // _width;
+    // _height;
+    // _key;
 
-    _meun;
-    _ready;
-    _score;
-    _clickPanel;
-    _gameover;
+    // _meun;
+    // _ready;
+    // _score;
+    // _clickPanel;
+    // _gameover;
 
     constructor(data)
     {

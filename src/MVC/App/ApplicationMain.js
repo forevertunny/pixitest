@@ -4,14 +4,14 @@ import { UIPanel } from "../View/Panel/UIPanel";
 
 export class ApplicationMain extends PIXI.Container
 {
-    _gamePanel = null;
-    _uiPanel = null;
 
     constructor(width, height, key)
     {
         super();
 
 
+        this._gamePanel = null;
+        this._uiPanel = null;
 
         this.init(width, height, key);
     }

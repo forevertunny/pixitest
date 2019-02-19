@@ -1,25 +1,12 @@
 import * as PIXI from "pixi.js";
-// import { ApplicationMain } from "./MVC/App/ApplicationMain";
-// import { ApplicationFacade } from "./MVC/App/ApplicationFacade";
-// import { GameCommandEvent } from "./MVC/Event/GameEvent";
+import { ApplicationMain } from "./MVC/App/ApplicationMain";
+import { ApplicationFacade } from "./MVC/App/ApplicationFacade";
+import { GameCommandEvent } from "./MVC/Event/GameEvent";
 // import bunnyUrl from '../assets/bunny.png'
 // import Isaac from "./Isaac";
 
 export default class
 {
-
-    static get AAAAAA ()
-    {
-        return {
-            abc: "abc",
-            zzz: 123456
-        }
-    }
-    // static TestName = "TestName";
-    // _key = "app";
-
-    // _stageWidth = 0;
-    // _stageHeight = 0;
 
     constructor(target, data)
     {
@@ -36,16 +23,16 @@ export default class
         window.addEventListener("resize", () => this.rendererResize());
         window.addEventListener('deviceOrientation', () => this.rendererResize());
 
-        // this.createScene();
+        this.createScene();
     }
 
     createScene ()
     {
-        // this._app = new ApplicationMain(this._stageWidth, this._stageHeight, this._key);
-        // this._canvans.stage.addChild(this._app);
-        // ApplicationFacade.getInstance(this._key).SetMainViwe(this._app);
-        // // // ApplicationFacade.getInstance(this._key).sendNotification(DatGuiEvent.ACTIVE, this._isDebug);
-        // ApplicationFacade.getInstance(this._key).sendNotification(GameCommandEvent.enable);
+        this._app = new ApplicationMain(this._stageWidth, this._stageHeight, this._key);
+        this._canvans.stage.addChild(this._app);
+        ApplicationFacade.getInstance(this._key).SetMainViwe(this._app);
+        // // ApplicationFacade.getInstance(this._key).sendNotification(DatGuiEvent.ACTIVE, this._isDebug);
+        ApplicationFacade.getInstance(this._key).sendNotification(GameCommandEvent.enable);
 
 
 

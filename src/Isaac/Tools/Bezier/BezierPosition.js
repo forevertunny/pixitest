@@ -3,29 +3,12 @@ import * as  PIXI from "pixi.js";
 export class BezierPosition
 {
 
-    p0;
-    p1;
-    p2;
-    p3;
+    // p0;
+    // p1;
+    // p2;
+    // p3;
 
-    ti = 0;
 
-    b0 = new PIXI.Point();
-    b1 = new PIXI.Point();
-    b2 = new PIXI.Point();
-    b3 = new PIXI.Point();
-
-    Ax;
-    Ay;
-    //private Az: number;
-
-    Bx;
-    By;
-    //private Bz: number;
-
-    Cx;
-    Cy;
-    //private Cz: number;
 
     /**
      * 
@@ -34,15 +17,34 @@ export class BezierPosition
      * @param {PIXI.Point} v2 
      * @param {PIXI.Point} v3 
      */
-    constructor( v0, v1, v2, v3 )
+    constructor(v0, v1, v2, v3)
     {
         this.p0 = v0;
         this.p1 = v1;
         this.p2 = v2;
         this.p3 = v3;
+
+        this.ti = 0;
+
+        this.b0 = new PIXI.Point();
+        this.b1 = new PIXI.Point();
+        this.b2 = new PIXI.Point();
+        this.b3 = new PIXI.Point();
+
+        this.Ax;
+        this.Ay;
+        //private Az: number;
+
+        this.Bx;
+        this.By;
+        //private Bz: number;
+
+        this.Cx;
+        this.Cy;
+        //private Cz: number;
     }
 
-    GetPointAtTime( t )
+    GetPointAtTime (t)
     {
         this.CheckConstant();
 
@@ -56,21 +58,21 @@ export class BezierPosition
 
         //let z = this.Az * t3 + this.Bz * t2 + this.Cz * t + this.p0.z;
 
-        return new PIXI.Point( x, y );
+        return new PIXI.Point(x, y);
     }
 
-    SetConstant()
+    SetConstant ()
     {
 
-        this.Cx = 3 * ( ( this.p0.x + this.p1.x ) - this.p0.x );
+        this.Cx = 3 * ((this.p0.x + this.p1.x) - this.p0.x);
 
-        this.Bx = 3 * ( ( this.p3.x + this.p2.x ) - ( this.p0.x + this.p1.x ) ) - this.Cx;
+        this.Bx = 3 * ((this.p3.x + this.p2.x) - (this.p0.x + this.p1.x)) - this.Cx;
 
         this.Ax = this.p3.x - this.p0.x - this.Cx - this.Bx;
 
-        this.Cy = 3 * ( ( this.p0.y + this.p1.y ) - this.p0.y );
+        this.Cy = 3 * ((this.p0.y + this.p1.y) - this.p0.y);
 
-        this.By = 3 * ( ( this.p3.y + this.p2.y ) - ( this.p0.y + this.p1.y ) ) - this.Cy;
+        this.By = 3 * ((this.p3.y + this.p2.y) - (this.p0.y + this.p1.y)) - this.Cy;
 
         this.Ay = this.p3.y - this.p0.y - this.Cy - this.By;
 
@@ -83,9 +85,9 @@ export class BezierPosition
         this.Az = this.p3.z - this.p0.z - this.Cz - this.Bz;*/
     }
 
-    CheckConstant()
+    CheckConstant ()
     {
-        if ( this.p0 !== this.b0 || this.p1 !== this.b1 || this.p2 !== this.b2 || this.p3 !== this.b3 )
+        if (this.p0 !== this.b0 || this.p1 !== this.b1 || this.p2 !== this.b2 || this.p3 !== this.b3)
         {
 
             this.SetConstant();

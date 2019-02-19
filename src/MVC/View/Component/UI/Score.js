@@ -2,8 +2,12 @@ import Isaac from "../../../../Isaac";
 
 export class Score extends Isaac.UI.Container
 {
-    _num_bitmap;
-    _bigfont = [];
+    constructor()
+    {
+        super();
+
+        this._bigfont = [];
+    }
 
     init ()
     {

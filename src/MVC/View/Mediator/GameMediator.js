@@ -3,7 +3,10 @@ import { GameProxyEvent } from "../../Event/GameEvent";
 
 export class GameMediator extends MVC.Mediator
 {
-    static NAME = "GameMediator";
+    static get NAME () 
+    {
+        return "GameMediator";
+    }
 
     constructor(viewComponent)
     {

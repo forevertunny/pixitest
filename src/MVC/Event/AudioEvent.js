@@ -1,16 +1,16 @@
-export class AudioCommandEvent
+export var AudioCommandEvent =
 {
-    static PLAY = "AudioCommandEvent_PLAYA";
+    PLAY: "AudioCommandEvent_PLAYA",
 
-    static STOP = "AudioCommandEvent_STOP";
+    STOP: "AudioCommandEvent_STOP",
 
-    static STOPALL = "AudioCommandEvent_STOPALL";
+    STOPALL: "AudioCommandEvent_STOPALL",
 
-    static PAUSE = "AudioCommandEvent_PAUSE";
+    PAUSE: "AudioCommandEvent_PAUSE",
 
-    static PAUSEALL = "AudioCommandEvent_PAUSEALL";
+    PAUSEALL: "AudioCommandEvent_PAUSEALL",
 
-    static MUTEALL = "AudioCommandEvent_MUTEALL";
+    MUTEALL: "AudioCommandEvent_MUTEALL",
 
-    static VOLUMEALL = "AudioCommand_VOLUMEALL";
+    VOLUMEALL: "AudioCommand_VOLUMEALL"
 }

@@ -6,19 +6,24 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class Pipes extends PIXI.Container
 {
-    _pipeCount = 10;
-    _pipeSpeed = 3;
+    constructor()
+    {
+        super();
 
-    _pipes = [];
-    _pipeSprites = [];
+        this._pipeCount = 10;
+        this._pipeSpeed = 3;
 
-    _currCheckPipe = 0;
+        this._pipes = [];
+        this._pipeSprites = [];
 
-    _minY;
-    _maxY;
-    _spaceX = 200;
+        this._currCheckPipe = 0;
 
-    _isAddScore = true;
+        this._minY;
+        this._maxY;
+        this._spaceX = 200;
+
+        this._isAddScore = true;
+    }
 
     init (data)
     {

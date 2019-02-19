@@ -2,15 +2,14 @@ import * as PIXI from "pixi.js";
 
 export class Pipe extends PIXI.Container
 {
-    _up;
-    _down;
 
-    _gap = 50;
-    _colliderScale = 0.98;
 
     constructor(data)
     {
         super();
+
+        this._gap = 50;
+        this._colliderScale = 0.98;
 
         this._up = new PIXI.Sprite(data.up);
         this._up.anchor.set(0.5, 0);

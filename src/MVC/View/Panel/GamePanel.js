@@ -9,14 +9,14 @@ import { FroceGround } from "../Component/Game/FroceGround";
 
 export class GamePanel extends PIXI.Container
 {
-    _width;
-    _height;
-    _key;
+    // _width;
+    // _height;
+    // _key;
 
-    _bacground;
-    _pipes;
-    _bird;
-    _forceground;
+    // _bacground;
+    // _pipes;
+    // _bird;
+    // _forceground;
 
     constructor(data)
     {

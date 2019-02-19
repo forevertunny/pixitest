@@ -1,5 +1,5 @@
-export class ApplicationFacadeEvent {
-    static INITSIMLECOMMAND = "ApplicationFacadeEvent_SET_START";
+export var ApplicationFacadeEvent = {
+    INITSIMLECOMMAND: "ApplicationFacadeEvent_SET_START",
 
-    static INITIALIZATION = "ApplicationFacadeEvent_INITIALIZATION";
+    INITIALIZATION: "ApplicationFacadeEvent_INITIALIZATION"
 }

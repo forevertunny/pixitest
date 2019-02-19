@@ -5,24 +5,27 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class Bird extends PIXI.Container
 {
-    /**
-     * @type {PIXI.extras.AnimatedSprite}
-     */
-    _bird_anima;
-    _bird_tween;
 
-    _bird_skins;
+    constructor()
+    {
+        super();
+
+        this._bird_anima;
+        this._bird_tween;
+
+        this._bird_skins;
 
 
-    _gravity = 0.25;
-    _velocity = 0;
-    _position = 180;
-    _rotation = 0;
-    _jump = -4.6;
+        this._gravity = 0.25;
+        this._velocity = 0;
+        this._position = 180;
+        this._rotation = 0;
+        this._jump = -4.6;
 
-    _min_rot = 0;
-    _max_rot = 0;
-    _radius = 0;
+        this._min_rot = 0;
+        this._max_rot = 0;
+        this._radius = 0;
+    }
 
     init (data)
     {

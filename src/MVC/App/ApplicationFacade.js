@@ -5,7 +5,12 @@ import { InitMacroCommand } from "../Controller/Init/Initialization";
 
 export class ApplicationFacade extends puremvc.Facade
 {
-    static Name = "ApplicationFacade";
+    // static Name = "ApplicationFacade";
+
+    static get Name ()
+    {
+        return "ApplicationFacade";
+    }
 
     /** @override */
     initializeController ()

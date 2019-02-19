@@ -4,7 +4,7 @@ import { GameCommandEvent } from "../../../Event/GameEvent";
 
 export class Click extends Isaac.UI.Container
 {
-    _mask;
+    // _mask;
 
     constructor(data)
     {
