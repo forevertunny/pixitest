@@ -1,4 +1,4 @@
-import App from './App'
+// import App from './App'
 import Main from "./Main";
 //const app = new App(document.getElementById('game'), 100)
 // app.run()

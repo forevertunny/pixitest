@@ -42,8 +42,8 @@ export class GameProxy extends MVC.Proxy
 
         this._loader = new PIXI.loaders.Loader();
         this._loader.add("sprites", "assets/sprites.json")
-            .add("bitfnt", "assets/bigfont.fnt")
-            .add("Numfnt", "assets/N.fnt")
+            .add("bitfnt", "assets/bigfont.xml")
+            .add("Numfnt", "assets/N.xml")
             .add("Energy_Object02", "assets/Energy_Object02.png")
             .load((loader, res) =>
             {
