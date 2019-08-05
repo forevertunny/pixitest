@@ -11,9 +11,6 @@ export class GameProxy extends MVC.Proxy
         return "GameProxy";
     }
 
-
-
-
     constructor(key)
     {
         super();
