@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "emoji-regex": "^7.0.3",
-    "gsap": "^2.1.0",
+    "gsap": "^3.6.0",
     "pixi-sound": "^2.1.0",
     "pixi.js": "^4.8.6",
     "puremvc": "^1.0.4"
